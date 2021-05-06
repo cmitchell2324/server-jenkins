@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  product-service:
+    build: ./
+    volumes:
+      - ./:/usr/src/myapp
+    ports:
+      - 8080:80
