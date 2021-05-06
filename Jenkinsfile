@@ -9,3 +9,7 @@ pipeline {
     }
   }
 }
+
+try {
+  Stuff here
+catch
