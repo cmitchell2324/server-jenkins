@@ -26,7 +26,7 @@ pipeline {
     
     stage('deploy') {
       steps {
-        sh 'docker build server-jenkins .'
+        sh 'docker build -t server-jenkins .'
         sh 'docker stop server-jenkins'
         sh 'docker rm $(docker ps -a -q)'
         sh 'docker run -d -p 8080:8080 server-jenkins'
