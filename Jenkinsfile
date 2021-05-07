@@ -10,6 +10,13 @@ pipeline {
       }
     }
     
+    stage('test') {
+      agent { docker { image 'maven:3.5.4' } }
+      steps {
+        sh 'mvn test'
+      }
+    }
+    
     stage('build') {
       agent { dockerfile true }
       steps {
